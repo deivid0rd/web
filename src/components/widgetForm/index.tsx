@@ -1,10 +1,13 @@
-import { CloseButton } from "../CloseButton";
-
 import { useState } from "react";
 
+import { CloseButton } from "../CloseButton";
+
 import bugImageUrl from '../../assets/bug.png'
-simport ideaImageUrl from '../../assets/idea.png'
+import ideaImageUrl from '../../assets/idea.png'
 import thoughtImageUrl from '../../assets/success.png'
+
+
+import FeedbackTypeStep from '../../components/widgetForm/steps/FeedbackTypeStep'
 
 
 
@@ -46,9 +49,9 @@ export function WidgetForm() {
                 <span className="text-xl leading-6">Deixe seu feedback</span>
 
                 <CloseButton />
-            </header>
+            </header>s
             {!feedbackType ? (
-                <FeedbackTypeStep />
+                <FeedbackTypeStep onFeedbacktypeChanged={setFeedbackType} />
             ) : (
                 <p>hello  world</p>
             )}
